@@ -11,6 +11,7 @@ export const Home = () => {
     const showLoginBtn = () => {
         if (!isAuthenticated) {
             return (
+            
                 <Button color="black" animated secondary>
                     <Button.Content visible>Login</Button.Content>
                     <Button.Content hidden>
@@ -23,10 +24,10 @@ export const Home = () => {
 
     return (
         <div>
-            <Message className="message-container" size="huge" secondary="true">
+            <Message className=" message-container" size="huge" secondary="true">
                 <p className="title"> SESSIONS </p>
-                <p >BY ARTISTS FOR ARTISTS</p>
-                <p>STORE-SHARE-CONNECT</p>
+                <p> BY ARTISTS FOR ARTISTS </p>
+                <p> STORE-SHARE-CONNECT </p>
                 <Link to="/login">
                     {showLoginBtn()}
                 </Link>
