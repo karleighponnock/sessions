@@ -2,6 +2,7 @@ import React from 'react'
 import { Header, Message, Button, Icon } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+import "./style.css";
 
 export const Home = () => {
     // access to the isAuthenticated property from the auth reducer state
@@ -23,9 +24,9 @@ export const Home = () => {
     return (
         <div>
             <Message className="message-container" size="huge" secondary="true">
-                <Header size="huge"> Home</Header>
-                <p style={{ marginBottom: "5px" }}>This is a Boiler Plate MERN application with authentication using JSON Web Tokens.</p>
-                <p style={{ margin: "5px 0 25px" }}>This APP was design to be used as a starting point for any developer looking to integrate authentication with a MERN application.</p>
+                <p className="title"> SESSIONS </p>
+                <p >BY ARTISTS FOR ARTISTS</p>
+                <p>STORE-SHARE-CONNECT</p>
                 <Link to="/login">
                     {showLoginBtn()}
                 </Link>
