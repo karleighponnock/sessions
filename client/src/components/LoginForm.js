@@ -5,7 +5,7 @@ import { Button, Form, Message, Segment, Label } from 'semantic-ui-react';
 import { Field, reduxForm } from "redux-form";
 import { clearErrors } from "../actions/authActions";
 
-const UserForm = (props) => {
+const LoginForm = (props) => {
 
     const error = useSelector(state => state.errors);
     const [errorMessage, setErrorMessage] = useState("");
@@ -20,7 +20,6 @@ const UserForm = (props) => {
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [error])
-
 
     return (
         <>
@@ -53,12 +52,22 @@ const UserForm = (props) => {
 
 const renderInput = ({ input, label }) => {
 
+    const selectIcon = () => {
+
+        if (input.name === "email") {
+            return "user icon"
+        } else {
+            return "lock icon"
+        }
+
+    }
+
     return (
 
         <div className="field">
             <div className="ui fluid left icon input">
                 <input {...input} autoComplete="off" placeholder={label} type={`${input.name === "email" ? "text" : "password"}`} />
-                <i aria-hidden="true" className={`${input.name === "email" ? "user" : "lock"} icon`}></i>
+                <i aria-hidden="true" className={selectIcon()}></i>
             </div>
         </div>
 
@@ -67,5 +76,5 @@ const renderInput = ({ input, label }) => {
 
 
 export default reduxForm({
-    form: "userform"
-})(UserForm)
+    form: "loginform"
+})(LoginForm)

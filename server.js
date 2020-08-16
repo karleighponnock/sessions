@@ -25,7 +25,7 @@ mongoose.connect(config.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: 
 app.use(routes);
 
 // check for "production" enviroment and set port
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 8000;
 
 // start server
 app.listen(PORT, () => {
