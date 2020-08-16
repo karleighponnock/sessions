@@ -1,7 +1,20 @@
+body{
+    font-family: 'Rubik Mono One', sans-serif;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+
 /* NavBar Styling */
 .ui.menu:first-child {
     margin-top: 0;
     margin-bottom: 0;
+}
+
+.titleTwo{
+    font-family: 'Monoton', cursive;
+    font-size: 60px;
+    letter-spacing: 7px;
 }
 
 /* Jumbotron/Message styling */
@@ -10,6 +23,8 @@
     padding: 50px;
     box-shadow: 0;
     margin: 0;
+    background-color: rgba(0, 0, 0, 0.466);
+    color: white;
 }
 /* UserForm styling */
 .form-container{

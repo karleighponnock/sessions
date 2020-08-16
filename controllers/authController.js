@@ -5,11 +5,12 @@ const User = require("../models/user");
 
 module.exports = {
     async register(req, res) {
+
         try {
 
-            const { email, password } = req.body;
+            const { email, password, firstname, lastname } = req.body;
             // Check user enters all fields
-            if (!email || !password) return res.status(400).json({ message: "Please provide email and password" });
+            if (!email || !password || !firstname || !lastname) return res.status(400).json({ message: "Please enter all fields" });
             // Check the user enters the right formatted email
             const reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
             if (reg.test(email) === false) return res.status(400).json({ message: "Incorrect email format" });
@@ -18,6 +19,8 @@ module.exports = {
 
             // create new User object to be saved in Database
             const newUser = new User({
+                firstname,
+                lastname,
                 email,
                 password
             })
@@ -40,6 +43,8 @@ module.exports = {
                         if (err) throw err;
                         res.json({
                             token,
+                            firstname,
+                            lastname,
                             email
                         })
                     })
@@ -62,6 +67,7 @@ module.exports = {
             if (!email || !password) return res.status(400).json({ message: "Please enter enter email and password" });
             // Check for correct email
             const user = await User.findOne({ email });
+
             // if email not found
             if (!user) return res.status(400).json({ message: "Email not found. Please register" })
             // if email found compare hashed password with incoming password
@@ -74,6 +80,8 @@ module.exports = {
                     if (err) throw err;
                     res.json({
                         token,
+                        firstname: user.firstname,
+                        lastname: user.lastname,
                         email
                     })
                 })

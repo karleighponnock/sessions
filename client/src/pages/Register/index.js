@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Header } from 'semantic-ui-react';
-import UserForm from "../../components/UserForm";
+import RegisterForm from "../../components/RegisterForm";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { registerUser } from "../../actions/authActions";
@@ -24,7 +24,7 @@ const Register = () => {
             <Header as='h2' secondary="true" textAlign='center'>
                 Register
             </Header>
-            <UserForm
+            <RegisterForm
                 renderMessage={renderFormMessage}
                 buttonText="Register"
                 onSubmit={onFormSubmit}
