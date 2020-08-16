@@ -10,6 +10,12 @@ body{
     margin-bottom: 0;
 }
 
+.titleTwo{
+    font-family: 'Monoton', cursive;
+    font-size: 60px;
+    letter-spacing: 7px;
+}
+
 /* Jumbotron/Message styling */
 .ui.message.message-container {
     text-align: center;
