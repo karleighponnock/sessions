@@ -3,6 +3,7 @@ import { Header, Message, Button, Icon } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import "./style.css";
+import BackgroundVideo from "../../components/BackgroundVideo/BackgroundVideo";
 
 export const Home = () => {
     // access to the isAuthenticated property from the auth reducer state
@@ -31,6 +32,7 @@ export const Home = () => {
                     {showLoginBtn()}
                 </Link>
             </Message>
+            <BackgroundVideo/>
 
         </div>
     )
