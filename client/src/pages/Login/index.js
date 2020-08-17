@@ -1,4 +1,3 @@
-
 import React, { useEffect } from "react";
 import { Header } from "semantic-ui-react";
 import { useSelector, useDispatch } from "react-redux";
@@ -15,7 +14,7 @@ const Login = (props) => {
 
     useEffect(() => {
         if (isAuthenticated) {
-            props.history.push("/pageone")
+            props.history.push("/newsesh")
         }
 
     })

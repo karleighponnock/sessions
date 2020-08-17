@@ -13,7 +13,7 @@ import Register from "../pages/Register";
 import PrivateRoute from "./PrivateRoute";
 import NoMatch from "../pages/NoMatch";
 
-export const App = () => {
+export const Main = () => {
 
     const dispatch = useDispatch();
     useEffect(() => {
@@ -39,4 +39,4 @@ export const App = () => {
     )
 }
 
-export default App;
+export default Main;

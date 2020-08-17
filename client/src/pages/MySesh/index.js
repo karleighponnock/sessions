@@ -1,6 +1,5 @@
 import React from 'react';
-import { Header, Message } from "semantic-ui-react";
-
+import { Message } from "semantic-ui-react";
 
 export const MySesh = () => {
     return (

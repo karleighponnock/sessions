@@ -2,6 +2,7 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const config = require("../config");
 const User = require("../models/user");
+const Category = require('../models/categoryModel')
 
 module.exports = {
     async register(req, res) {
@@ -107,3 +108,26 @@ module.exports = {
     }
 
 };
+
+exports.createCategory = (req, res) => {
+    let name = req.body.name
+    let image = req.file.path
+    console.log(name, image)
+    const category = new Category({
+        name: name,
+        image: image
+    })
+    category.save((err, category) => {
+        if (err) {
+            console.log(err)
+            return res.status(400).json({
+                errors: err.meesage
+            })
+        }
+        return res.json({
+            message: "Created category successfully",
+            category
+        })
+    })
+
+}

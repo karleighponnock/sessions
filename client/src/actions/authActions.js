@@ -58,7 +58,7 @@ export const loginUser = (data) => async dispatch => {
             payload: response.data
         });
         // redirect to page
-        history.push("/pageone");
+        history.push("/mysesh");
 
     } catch (err) {
         // dispatch get error Action
