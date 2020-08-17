@@ -21,7 +21,6 @@ function App() {
     data.append('categoryImage', files[0]);
     data.append('name', files[0].name);
     setFormData(data);
-    // console.log(data);
   };
 
   // Submit Form
@@ -111,6 +110,7 @@ function App() {
       </form>
       <img
         className='mt-3'
+        // src={`http://localhost:3000/${info.image}`}
         src={`/api/${info.image}`}
         alt={`${info.name}`}
         style={{ width: '359px' }}
