@@ -16,7 +16,6 @@ const Login = (props) => {
         if (isAuthenticated) {
             props.history.push("/newsesh")
         }
-
     })
 
     const renderFormMessage = () => {
