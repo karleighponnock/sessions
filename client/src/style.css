@@ -1,7 +1,11 @@
 body{
     font-family: 'Rubik Mono One', sans-serif;
     background-color: rgba(15, 133, 103, 0.5);
-   
+}
+
+.submit{
+    background-color: rgb(161, 101, 240);
+    color: white;
 }
 
 
@@ -23,13 +27,15 @@ body{
     padding: 50px;
     box-shadow: 0;
     margin: 0;
-    background-color: rgba(0, 0, 0, 0.466);
-    color: white;
+    background-color: rgba(0, 0, 0, 0.671);
+    color: rgb(182, 150, 224);
+    
     z-index: 1;
     position: absolute;
     top: 10%;
     left: 25%;
     right: 25%;
+
 
 }
 /* UserForm styling */
