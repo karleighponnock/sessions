@@ -17,12 +17,11 @@ function App() {
 
   // Upload image
   const upload = ({ target: { files } }) => {
-    console.log(files[0].name);
     let data = new FormData();
     data.append('categoryImage', files[0]);
     data.append('name', files[0].name);
     setFormData(data);
-   
+    console.log(data);
   };
 
   // Submit Form
