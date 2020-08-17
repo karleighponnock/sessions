@@ -21,7 +21,7 @@ function App() {
     data.append('categoryImage', files[0]);
     data.append('name', files[0].name);
     setFormData(data);
-    console.log(data);
+    // console.log(data);
   };
 
   // Submit Form
@@ -106,7 +106,7 @@ function App() {
             Choose file
           </label>
         </div>
-        <button type='submit' className='btn btn-primary w-100'>
+        <button type='submit' className='btn btn-primary'>
           Submit
         </button>
       </form>

@@ -24,5 +24,5 @@ let upload = multer({
     fileFilter: fileFilter,
 });
 
-// exports upload as multiple files (can change to multiple or single)
+// exports upload as multiple files (can change to multiple or single but only single is working here and not even that well)
 module.exports = upload.single('categoryImage')
