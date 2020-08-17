@@ -1,5 +1,5 @@
 import React from 'react'
-import { Header, Message, Button, Icon } from "semantic-ui-react";
+import { Message, Button, Icon } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import "./style.css";
