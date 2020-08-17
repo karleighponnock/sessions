@@ -68,7 +68,6 @@ function App() {
 
   return (
     <div
-      style={{ width: '100vw', height: '100vh' }}
       className='d-flex justify-content-center align-items-center flex-column'
     >
       {error.found && (
@@ -102,11 +101,11 @@ function App() {
             aria-describedby='inputGroupFileAddon04'
             onChange={upload}
           />
-          <label className='custom-file-label' htmlFor='inputGroupFile04'>
+          <label className='custom-file-label'style={{fontSize:'15px'}} htmlFor='inputGroupFile04'>
             Choose file
           </label>
         </div>
-        <button type='submit' className='btn btn-primary'>
+        <button type='submit' className='btn submit w-100'>
           Submit
         </button>
       </form>
