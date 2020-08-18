@@ -3,6 +3,7 @@ import "./style.css";
 import Card from "../../components/Card"
 import Portrait from "../../assets/portrait.jpg"
 import Lists from "../../components/Lists";
+import Avatar from "../../components/Avatar/Avatar"
 
 
 function Main() {
@@ -13,7 +14,7 @@ function Main() {
   
           <Card>
            <div className="image-text-container">
-            <img className="portrait" src={Portrait} alt="Photo of Karleigh"/>
+            <Avatar/>
             <p className="about"> Hello! My name is Karleigh Ponnock I am a dedicated Junior Front-End Web Developer in Miami, Florida..............
            </p>
            <div className="list">
