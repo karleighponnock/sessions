@@ -47,6 +47,7 @@ function Avatar() {
       >
         <img
           ref={uploadedImage}
+          alt="random images"
           style={{
             width: "100%",
             height: "100%",
