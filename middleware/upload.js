@@ -5,10 +5,11 @@ const path = require('path');
 const storage = multer.diskStorage({
     // destination uplaods folder
     destination: function (req, file, cb) {
-        cb(null, './uploads/');
+        console.log(file)
+        cb(null, './client/public/images/uploads/');
     },
     filename: function (req, file, cb) {
-        console.log(file)
+        // console.log(file)
         // sets unique name
         cb(null, 'sessionImages' + '-' + Date.now() + path.extname(file.originalname));
     }

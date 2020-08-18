@@ -100,9 +100,13 @@ function App() {
             aria-describedby='inputGroupFileAddon04'
             onChange={upload}
           />
-          <label className='custom-file-label'style={{fontSize:'15px'}} htmlFor='inputGroupFile04'>
+          {/* <label className='custom-file-label'style={{fontSize:'15px'}} htmlFor='inputGroupFile04'>
             Choose file
-          </label>
+          </label> */}
+          {/* changed property to textarea and it removed the so-called browse "button" */}
+          <textarea className='custom-file-label'style={{fontSize:'15px'}} htmlFor='inputGroupFile04'>
+            Choose file
+          </textarea>
         </div>
         <button type='submit' className='btn submit w-100'>
           Submit
@@ -110,8 +114,8 @@ function App() {
       </form>
       <img
         className='mt-3'
-        // src={`http://localhost:3000/${info.image}`}
-        src={`/api/${info.image}`}
+        // src={`http://localhost:3000/${info.image}`} 
+        src={`/images/uploads/${info.image}`}  // used /api instead of localhost
         alt={`${info.name}`}
         style={{ width: '359px' }}
       />
