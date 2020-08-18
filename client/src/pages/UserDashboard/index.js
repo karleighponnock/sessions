@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+// import React, { useState, useEffect } from "react";
+import React from "react";
 import "./style.css";
 import Card from "../../components/Card"
-import Portrait from "../../assets/portrait.jpg"
+// import Portrait from "../../assets/portrait.jpg"
 import Lists from "../../components/Lists";
 import Avatar from "../../components/Avatar/Avatar"
 
