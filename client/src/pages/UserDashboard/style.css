@@ -1,0 +1,22 @@
+.portrait{
+    height: 100%;
+    width: 30%;
+     
+ }
+ 
+ .image-text-container{
+     display: flex;
+ }
+ 
+ .about{
+    padding: 30px;
+    font-size: 21px ;
+ }
+ 
+ 
+ .list{
+    clear: both;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.397);
+    color: black;
+ }

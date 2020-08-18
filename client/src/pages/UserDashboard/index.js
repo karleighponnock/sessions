@@ -1,21 +1,31 @@
-import React from 'react';
-import { Header, Message } from "semantic-ui-react";
-import { useSelector } from "react-redux";
+import React, { useState, useEffect } from "react";
+import "./style.css";
+import Card from "../../components/Card"
+import Portrait from "../../assets/portrait.jpg"
+import Lists from "../../components/Lists";
 
 
-export const UserDashboard = () => {
-    // access to the currentUser property from the auth reducer state
-    const user = useSelector(state => state.auth.currentUser);
+function Main() {
 
-    return (
-        <>
-            <Message className="message-container" size="huge" secondary="true">
-                <Header size="huge"> User Dashboard </Header>
-                <p>This is a Protected Route</p>
-                <p>Welcome {user ? user.email : ""}</p>
-            </Message>
-        </>
-    )
+  return (
+    <div>
+      <div>
+  
+          <Card>
+           <div className="image-text-container">
+            <img className="portrait" src={Portrait} alt="Photo of Karleigh"/>
+            <p className="about"> Hello! My name is Karleigh Ponnock I am a dedicated Junior Front-End Web Developer in Miami, Florida..............
+           </p>
+           <div className="list">
+           <Lists />
+           </div>
+           </div>
+          </Card>
+      </div>
+
+    </div>
+  );
 }
 
-export default UserDashboard;
+
+export default Main;
