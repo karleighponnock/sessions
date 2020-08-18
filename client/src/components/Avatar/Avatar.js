@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-
 import "./styles.css";
 
 function Avatar() {
@@ -40,9 +39,9 @@ function Avatar() {
       />
       <div
         style={{
-          height: "60px",
-          width: "60px",
-          border: "1px dashed black"
+          height: "200px",
+          width: "200px",
+          border: "1px black"
         }}
         onClick={() => imageUploader.current.click()}
       >
