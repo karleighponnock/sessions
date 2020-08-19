@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import MySesh from "./pages/MySesh/index";
 import axios from 'axios';
 
 function App() {
@@ -119,6 +121,13 @@ function App() {
         alt={`${info.name}`}
         style={{ width: '359px' }}
       />
+      <div className="App">
+	      <Router>
+		      <div>
+			      <Route exact path="/MySesh" component={MySesh} />
+		      </div>
+	      </Router>
+      </div>
     </div>
   );
 }

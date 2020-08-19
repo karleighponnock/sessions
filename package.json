@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/jaab30/react-jwt-boiler-plate#readme",
   "dependencies": {
+    "aws-sdk": "^2.736.0",
     "bcrypt": "^5.0.0",
     "body-parser": "^1.19.0",
     "concurrently": "^5.3.0",
@@ -32,7 +33,10 @@
     "mongoose": "^5.9.20",
     "morgan": "^1.10.0",
     "multer": "^1.4.2",
+    "multer-s3": "^2.9.0",
     "path": "^0.12.7",
-    "react-toastify": "^6.0.8"
+    "react-toastify": "^6.0.8",
+    "url": "^0.11.0",
+    "validator": "^13.1.1"
   }
 }
