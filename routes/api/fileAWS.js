@@ -8,7 +8,7 @@ const path = require( 'path' );
 const router = express.Router();
 
 /**
- * PROFILE IMAGE STORING STARTS
+ * fileAWS IMAGE STORING STARTS
  */
 const s3 = new aws.S3({
 	accessKeyId: process.env.AWS_ACCESS_KEY_ID,
@@ -19,7 +19,7 @@ const s3 = new aws.S3({
 /**
  * Single Upload
  */
-const profileImgUpload = multer({
+const fileAWSImgUpload = multer({
 	storage: multerS3({
 		s3: s3,
 		bucket: process.env.AWS_BUCKET_NAME,
@@ -32,7 +32,7 @@ const profileImgUpload = multer({
 	fileFilter: function( req, file, cb ){
 		checkFileType( file, cb );
 	}
-}).single('profileImage');
+}).single('fileAWSImage');
 
 /**
  * Check File Type
@@ -55,12 +55,12 @@ function checkFileType( file, cb ){
 }
 
 /**
- * @route POST /api/profile/business-img-upload
+ * @route POST /api/fileAWS/business-img-upload
  * @desc Upload post image
  * @access public
  */
-router.post( '/profile-img-upload', ( req, res ) => {
-	profileImgUpload( req, res, ( error ) => {
+router.post( '/fileAWS-upload', ( req, res ) => {
+	fileAWSImgUpload( req, res, ( error ) => {
 		console.log( 'requestOkokok', req.file );
 		console.log( 'error', error );
 		if( error ){
@@ -75,7 +75,7 @@ router.post( '/profile-img-upload', ( req, res ) => {
 				// If Success
 				const imageName = req.file.key;
 				const imageLocation = req.file.location;
-// Save the file name into database into profile model
+// Save the file name into database into fileAWS model
 				res.json( {
 					image: imageName,
 					location: imageLocation
@@ -105,7 +105,7 @@ const uploadsBusinessGallery = multer({
 	}
 }).array( 'galleryImage', 4 );
 /**
- * @route POST /api/profile/multiple-file-upload
+ * @route POST /api/fileAWS/multiple-file-upload
  * @desc Upload business Gallery images
  * @access public
  */

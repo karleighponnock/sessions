@@ -44,8 +44,8 @@ class MySesh extends Component {
 		const data = new FormData();
 // If file selected
 		if ( this.state.selectedFile ) {
-			data.append( 'profileImage', this.state.selectedFile, this.state.selectedFile.name );
-			axios.post( '/api/profile/profile-img-upload', data, {
+			data.append( 'fileAWSImage', this.state.selectedFile, this.state.selectedFile.name );
+			axios.post( '/api/fileAWS/fileAWS-upload', data, {
 				headers: {
 					'accept': 'application/json',
 					'Accept-Language': 'en-US,en;q=0.8',
@@ -88,7 +88,7 @@ class MySesh extends Component {
 			for ( let i = 0; i < selectedFiles.length; i++ ) {
 				data.append( 'galleryImage', selectedFiles[ i ], selectedFiles[ i ].name );
 			}
-			axios.post( '/api/profile/multiple-file-upload', data, {
+			axios.post( '/api/fileAWS/multiple-file-upload', data, {
 				headers: {
 					'accept': 'application/json',
 					'Accept-Language': 'en-US,en;q=0.8',
@@ -153,7 +153,7 @@ class MySesh extends Component {
 						<p className="text-muted" style={{ marginLeft: '12px' }}>Upload Size: 250px x 250px ( Max 2MB )</p>
 					</div>
 					<div className="card-body">
-						<p className="card-text">Please upload an image for your profile</p>
+						<p className="card-text">Please upload an image for your fileAWS</p>
 						<input type="file" onChange={this.singleFileChangedHandler}/>
 						<div className="mt-5">
 							<button className="btn btn-info" onClick={this.singleFileUploadHandler}>Upload!</button>

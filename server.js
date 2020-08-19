@@ -6,7 +6,7 @@ const config = require("./config");
 const routes = require("./routes");
 const bodyParser = require( 'body-parser' );
 
-// connects with profile.js
+// connects with fileAWS.js
 const router = express.Router();
 
 const app = express();
@@ -19,8 +19,8 @@ app.use( bodyParser.json() );
 
 module.exports = router;
 
-const profile = require( './routes/api/profile' );
-app.use( '/api/profile', profile );
+const fileAWS = require( './routes/api/fileAWS' );
+app.use( '/api/fileAWS', fileAWS );
 
 // serve up static assets
 if (process.env.NODE_ENV === "production") {
