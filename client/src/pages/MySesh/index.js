@@ -160,6 +160,9 @@ class MySesh extends Component {
 						</div>
 					</div>
 				</div>
+				{/* showing image from aws */}
+				<img src="https://artangelssessions.s3.amazonaws.com/16-1597794433226.jpg" alt="" width="100" length="100"/>
+
 				{/* Multiple File Upload */}
 				<div className="card border-light mb-3" style={{ boxShadow: '0 5px 10px 2px rgba(195,192,192,.5)' }}>
 					<div className="card-header">
@@ -177,7 +180,10 @@ class MySesh extends Component {
 
 
 {/* showing image from aws */}
-				<img src="https://artangelssessions.s3.amazonaws.com/16-1597794433226.jpg" alt="" />
+				<img src="https://artangelssessions.s3.amazonaws.com/16-1597794433226.jpg" alt="" width="100" length="100"/>
+				<img src="https://artangelssessions.s3.amazonaws.com/16-1597794433226.jpg" alt="" width="100" length="100"/>
+				<img src="https://artangelssessions.s3.amazonaws.com/16-1597794433226.jpg" alt="" width="100" length="100"/>
+				<img src="https://artangelssessions.s3.amazonaws.com/16-1597794433226.jpg" alt="" width="100" length="100"/>
 
 
 			</div>
