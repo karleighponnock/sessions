@@ -67,69 +67,69 @@ function App() {
     
   };
 
-  return (
-    <div
-      className='d-flex justify-content-center align-items-center flex-column'
-    >
-      {error.found && (
-        <div
-          className='alert alert-danger'
-          role='alert'
-          style={{ width: '359px' }}
-        >
-          {error.message}
-        </div>
-      )}
+  // return (
+  //   <div
+  //     className='d-flex justify-content-center align-items-center flex-column'
+  //   >
+  //     {error.found && (
+  //       <div
+  //         className='alert alert-danger'
+  //         role='alert'
+  //         style={{ width: '359px' }}
+  //       >
+  //         {error.message}
+  //       </div>
+  //     )}
 
-      <form onSubmit={handleSubmit} style={{ width: '359px' }}>
-        <div className='progress mb-3 w-100'>
-          <div
-            className='progress-bar'
-            role='progressbar'
-            style={{ width: `${progressPercent}%` }}
-            aria-valuenow={progressPercent}
-            aria-valuemin={0}
-            aria-valuemax={100}
-          >
-            {progressPercent}
-          </div>
-        </div>
-        <div className='custom-file mb-3'>
-          <input
-            type='file'
-            className='custom-file-input'
-            id='inputGroupFile04'
-            aria-describedby='inputGroupFileAddon04'
-            onChange={upload}
-          />
-          {/* <label className='custom-file-label'style={{fontSize:'15px'}} htmlFor='inputGroupFile04'>
-            Choose file
-          </label> */}
-          {/* changed property to textarea and it removed the so-called browse "button" */}
-          <textarea className='custom-file-label'style={{fontSize:'15px'}} htmlFor='inputGroupFile04'>
-            Choose file
-          </textarea>
-        </div>
-        <button type='submit' className='btn submit w-100'>
-          Submit
-        </button>
-      </form>
-      <img
-        className='mt-3'
-        // src={`http://localhost:3000/${info.image}`} 
-        src={`/images/uploads/${info.image}`}  // used /api instead of localhost
-        alt={`${info.name}`}
-        style={{ width: '359px' }}
-      />
-      <div className="App">
-	      <Router>
-		      <div>
-			      <Route exact path="/MySesh" component={MySesh} />
-		      </div>
-	      </Router>
-      </div>
-    </div>
-  );
+  //     <form onSubmit={handleSubmit} style={{ width: '359px' }}>
+  //       <div className='progress mb-3 w-100'>
+  //         <div
+  //           className='progress-bar'
+  //           role='progressbar'
+  //           style={{ width: `${progressPercent}%` }}
+  //           aria-valuenow={progressPercent}
+  //           aria-valuemin={0}
+  //           aria-valuemax={100}
+  //         >
+  //           {progressPercent}
+  //         </div>
+  //       </div>
+  //       <div className='custom-file mb-3'>
+  //         <input
+  //           type='file'
+  //           className='custom-file-input'
+  //           id='inputGroupFile04'
+  //           aria-describedby='inputGroupFileAddon04'
+  //           onChange={upload}
+  //         />
+  //         {/* <label className='custom-file-label'style={{fontSize:'15px'}} htmlFor='inputGroupFile04'>
+  //           Choose file
+  //         </label> */}
+  //         {/* changed property to textarea and it removed the so-called browse "button" */}
+  //         <textarea className='custom-file-label'style={{fontSize:'15px'}} htmlFor='inputGroupFile04'>
+  //           Choose file
+  //         </textarea>
+  //       </div>
+  //       <button type='submit' className='btn submit w-100'>
+  //         Submit
+  //       </button>
+  //     </form>
+  //     <img
+  //       className='mt-3'
+  //       // src={`http://localhost:3000/${info.image}`} 
+  //       src={`/images/uploads/${info.image}`}  // used /api instead of localhost
+  //       alt={`${info.name}`}
+  //       style={{ width: '359px' }}
+  //     />
+  //     <div className="App">
+	//       <Router>
+	// 	      <div>
+	// 		      <Route exact path="/MySesh" component={MySesh} />
+	// 	      </div>
+	//       </Router>
+  //     </div>
+  //   </div>
+  // );
 }
 
 export default App;

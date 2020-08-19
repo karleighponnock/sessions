@@ -125,7 +125,7 @@ class MySesh extends Component {
 	};
 
 	// ShowAlert Function
-	ocShowAlert = (message, background = '#3089cf') => {
+	ocShowAlert = (message, background = '#7fffd4') => {
 		let alertContainer = document.querySelector('#oc-alert-container'),
 			alertEl = document.createElement('div'),
 			textNode = document.createTextNode(message);
@@ -146,40 +146,43 @@ class MySesh extends Component {
 		console.log(this.state);
 		return (
 			<div className="container">
+				<h1>MySesh</h1>
+				<h5>View your gallery</h5>
+			
 				{
 					this.state.images.map((x, i) =>
 						<img style={imgstyle} src={x} key={i + '-img'} alt={x} />)
 				}
+		
+			
 				{/* For Alert box*/}
-				<div id="oc-alert-container"></div>
+				{/* <div id="oc-alert-container"></div> */}
 				{/* Single File Upload*/}
-				<div className="card border-light mb-3 mt-5" style={{ boxShadow: '0 5px 10px 2px rgba(195,192,192,.5)' }}>
+				{/* <div className="card mt-5">
 					<div className="card-header">
-						<h3 style={{ color: '#555', marginLeft: '12px' }}>Single Image Upload</h3>
-						<p className="text-muted" style={{ marginLeft: '12px' }}>Upload Size: 250px x 250px ( Max 2MB )</p>
+						<h3>Single Image Upload</h3>
+						<p> * Upload Size: 250px x 250px ( Max 2MB ) * </p>
 					</div>
 					<div className="card-body">
-						<p className="card-text">Please upload an image for your fileAWS</p>
 						<input type="file" onChange={this.singleFileChangedHandler} />
 						<div className="mt-5">
 							<button className="btn btn-info" onClick={this.singleFileUploadHandler}>Upload!</button>
 						</div>
 					</div>
-				</div>
-			{/* Multiple File Upload */}
-				<div className="card border-light mb-3" style={{ boxShadow: '0 5px 10px 2px rgba(195,192,192,.5)' }}>
+				</div> */}
+				{/* Multiple File Upload */}
+				{/* <div className="card">
 					<div className="card-header">
-						<h3 style={{ color: '#555', marginLeft: '12px' }}>Upload Muliple Images</h3>
-						<p className="text-muted" style={{ marginLeft: '12px' }}>Upload Size: 400px x 400px ( Max 2MB )</p>
+						<h3>Multiple Images Upload ( Max 4 ) </h3>
+						<p> * Upload Size: 400px x 400px ( Max 2MB ) * </p>
 					</div>
 					<div className="card-body">
-						<p className="card-text">Please upload the Gallery Images for your gallery</p>
 						<input type="file" multiple onChange={this.multipleFileChangedHandler} />
 						<div className="mt-5">
-							<button className="btn btn-info" onClick={this.multipleFileUploadHandler}>Upload!</button>
+							<button className="btn btn-info" onClick={this.multipleFileUploadHandler}>Upload !</button>
 						</div>
 					</div>
-				</div>
+				</div> */}
 			</div>
 		);
 	}
