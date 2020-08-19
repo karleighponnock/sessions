@@ -14,7 +14,7 @@ const Login = (props) => {
 
     useEffect(() => {
         if (isAuthenticated) {
-            props.history.push("/newsesh")
+            props.history.push("/mysesh")
         }
     })
 
