@@ -19,8 +19,8 @@ app.use( bodyParser.json() );
 
 module.exports = router;
 
-const fileAWS = require( './routes/api/fileAWS' );
-app.use( '/api/fileAWS', fileAWS );
+// const fileAWS = require( './routes/api/fileAWS' );
+// app.use( '/api/fileAWS', fileAWS );
 
 // serve up static assets
 if (process.env.NODE_ENV === "production") {

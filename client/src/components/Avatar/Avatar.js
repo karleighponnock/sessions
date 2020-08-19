@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import axios from 'axios';
-import $ from 'jquery';
 
 // function Avatar() {
   class Avatar extends Component {
@@ -73,12 +72,10 @@ import $ from 'jquery';
         alertEl = document.createElement( 'div' ),
         textNode = document.createTextNode( message );
       alertEl.setAttribute( 'class', 'oc-alert-pop-up' );
-      $( alertEl ).css( 'background', background );
+      alertEl.style.backgroundColor = background
       alertEl.appendChild( textNode );
       alertContainer.appendChild( alertEl );
       setTimeout( function () {
-        $( alertEl ).fadeOut( 'slow' );
-        $( alertEl ).remove();
       }, 3000 );
     };
   
