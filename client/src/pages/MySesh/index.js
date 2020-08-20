@@ -145,8 +145,8 @@ class MySesh extends Component {
 
 		console.log(this.state);
 		return (
-			<div className="container">
-				<h1>My Sessions</h1>
+			<div className="container-all">
+				 <p className="title title-new"> My Sessions</p>
 				<h5>View your gallery</h5>
 			
 				{
