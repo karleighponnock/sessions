@@ -146,7 +146,8 @@ class NewSesh extends Component {
 
         return (
             <div className="container-all">
-                		<h1>New Sesh</h1>
+                <p className="title title-new"> New Sesh</p>
+                		
 				{/* <h5>Upload photos to client galleries</h5>
 
                 <div id="image-group" className="container mt-120">                    
