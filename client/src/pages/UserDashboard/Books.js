@@ -67,10 +67,10 @@ function Books() {
                 {books.map(book => (
                   <ListItem key={book._id}>
                     <Link to={"/books/" + book._id}>
-                      <strong>
-                        {book.title} from {book.author} <br/>
+                      <div>
+                        {book.title} from {book.author} 
+                        </div> <br/>
                         {book.synopsis}
-                      </strong>
                     </Link>
                     <DeleteBtn onClick={() => deleteBook(book._id)} />
                   </ListItem>
@@ -95,8 +95,8 @@ function Books() {
     />
     <TextArea
       onChange={handleInputChange}
-      name="Bio"
-      placeholder="Synopsis (Optional)"
+      name="synopsis"
+      placeholder="Bio (required)"
     />
     <FormBtn
       disabled={!(formObject.author && formObject.title)}
