@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import DeleteBtn from "../components/DeleteBtn";
-import Jumbotron from "../components/Jumbotron";
-import API from "../utils/API";
+import DeleteBtn from "../../components/DeleteBtn/index";
+import API from "../../utils/API";
 import { Link } from "react-router-dom";
-import { Col, Row, Container } from "../components/Grid";
-import { List, ListItem } from "../components/List";
-import { Input, TextArea, FormBtn } from "../components/Form";
-import Avatar from "../components/Avatar/Avatar"
+import { Col, Row, Container } from "../../components/Grid/index";
+import { List, ListItem } from "../../components/List";
+import { Input, TextArea, FormBtn } from "../../components/Form";
+import Avatar from "../../components/Avatar/Avatar"
+import "./style.css";
 
 function Books() {
   // Setting our component's initial state
@@ -57,44 +57,20 @@ function Books() {
 
     return (
       <Container fluid>
+        <div className="pic">
         <Avatar/>
+        </div>
         <Row>
-          <Col size="md-3">
-  
-            <form>
-              <Input
-                onChange={handleInputChange}
-                name="title"
-                placeholder="Name (required)"
-              />
-              <Input
-                onChange={handleInputChange}
-                name="author"
-                placeholder="Location (required)"
-              />
-              <TextArea
-                onChange={handleInputChange}
-                name="Bio"
-                placeholder="Synopsis (Optional)"
-              />
-              <FormBtn
-                disabled={!(formObject.author && formObject.title)}
-                onClick={handleFormSubmit}
-              >
-                Submit Book
-              </FormBtn>
-            </form>
-          </Col>
-          <Col size="md-6 sm-12">
+          <Col size="md-8 sm-12">
             {books.length ? (
               <List>
                 {books.map(book => (
                   <ListItem key={book._id}>
                     <Link to={"/books/" + book._id}>
-                      <strong>
-                        {book.title} from {book.author} <br/>
+                      <div>
+                        {book.title} from {book.author} 
+                        </div> <br/>
                         {book.synopsis}
-                      </strong>
                     </Link>
                     <DeleteBtn onClick={() => deleteBook(book._id)} />
                   </ListItem>
@@ -104,6 +80,32 @@ function Books() {
               <h3>No Results to Display</h3>
             )}
           </Col>
+          <Col size="md-3">
+  
+  <form>
+    <Input
+      onChange={handleInputChange}
+      name="title"
+      placeholder="Name (required)"
+    />
+    <Input
+      onChange={handleInputChange}
+      name="author"
+      placeholder="Location (required)"
+    />
+    <TextArea
+      onChange={handleInputChange}
+      name="synopsis"
+      placeholder="Bio (required)"
+    />
+    <FormBtn
+      disabled={!(formObject.author && formObject.title)}
+      onClick={handleFormSubmit}
+    >
+      Submit Book
+    </FormBtn>
+  </form>
+</Col>
         </Row>
       </Container>
     );
