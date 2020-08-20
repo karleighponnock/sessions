@@ -57,9 +57,11 @@ function Books() {
 
     return (
       <Container fluid>
-        <Avatar className="pic"/>
+        <div className="pic">
+        <Avatar/>
+        </div>
         <Row>
-          <Col size="md-6 sm-12">
+          <Col size="md-8 sm-12">
             {books.length ? (
               <List>
                 {books.map(book => (
