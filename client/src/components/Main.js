@@ -12,7 +12,7 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import PrivateRoute from "./PrivateRoute";
 import NoMatch from "../pages/NoMatch";
-import Books from "../pages/UserDashboard/Books";
+
 
 // booksimport Books from "./pages/Books";
 // import Detail from "../pages/Detail";
@@ -37,15 +37,7 @@ export const Main = () => {
                     <PrivateRoute path="/dashboard" component={UserDashboard} />
                     <PrivateRoute path="/mysesh" component={MySesh} />
                     <PrivateRoute path="/newsesh" component={NewSesh} />
-                    <Route exact path={["/books"]}>
-                        <Books />
-                    </Route>
-                    <Route exact path="/books/:id">
-                        {/* <Detail /> */}
-                    </Route>
-                    <Route>
-                        <NoMatch />
-                    </Route>
+                   
                     <Route component={NoMatch} />
                 </Switch>
             </Router>
