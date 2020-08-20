@@ -21,7 +21,7 @@ function Books() {
   // Loads all books and sets them to books
   function loadBooks() {
     API.getBooks()
-      .then(res => 
+      .then(res =>
         setBooks(res.data)
       )
       .catch(err => console.log(err));
@@ -37,7 +37,7 @@ function Books() {
   // Handles updating component state when the user types into the input field
   function handleInputChange(event) {
     const { name, value } = event.target;
-    setFormObject({...formObject, [name]: value})
+    setFormObject({ ...formObject, [name]: value })
   };
 
   // When the form is submitted, use the API.saveBook method to save the book data
@@ -55,61 +55,75 @@ function Books() {
     }
   };
 
-    return (
-      <Container fluid>
-        <div className="pic">
-        <Avatar/>
-        </div>
-        <Row>
-          <Col size="md-8 sm-12">
+  return (
+    <Container fluid>
+      <div className="pic">
+        <Avatar />
+      </div>
+      <Row>
+        <div className="info">
+          <Col size="md-12 sm-4 ">
             {books.length ? (
               <List>
                 {books.map(book => (
                   <ListItem key={book._id}>
                     <Link to={"/books/" + book._id}>
-                      <div>
-                        {book.title} from {book.author} 
-                        </div> <br/>
+                      <div className="info">
+                        <div className="name">
+                          {book.title}
+                        </div>
+                        <div className="location">
+                          <br />
+                        from {book.author}
+                        </div> <br />
                         {book.synopsis}
+                      </div>
                     </Link>
                     <DeleteBtn onClick={() => deleteBook(book._id)} />
                   </ListItem>
+
                 ))}
               </List>
             ) : (
-              <h3>No Results to Display</h3>
-            )}
+                <h3>No Results to Display</h3>
+              )}
           </Col>
-          <Col size="md-3">
-  
-  <form>
-    <Input
-      onChange={handleInputChange}
-      name="title"
-      placeholder="Name (required)"
-    />
-    <Input
-      onChange={handleInputChange}
-      name="author"
-      placeholder="Location (required)"
-    />
-    <TextArea
-      onChange={handleInputChange}
-      name="synopsis"
-      placeholder="Bio (required)"
-    />
-    <FormBtn
-      disabled={!(formObject.author && formObject.title)}
-      onClick={handleFormSubmit}
-    >
-      Submit Book
-    </FormBtn>
-  </form>
-</Col>
-        </Row>
-      </Container>
-    );
-  }
+        </div>
+        <div>
+          <Col size="md-12" >
+            <form className="form">
+              <h3>Update Profile</h3>
+              <Input
+                onChange={handleInputChange}
+                name="title"
+                placeholder="Name (required)"
+                className="fill-name"
+              />
+              <Input
+                onChange={handleInputChange}
+                name="author"
+                placeholder="Location (required)"
+                className="fill-loc"
+              />
+              <TextArea
+                onChange={handleInputChange}
+                name="synopsis"
+                placeholder="Bio (optional)"
+                className="fill-bio"
+              />
+              <FormBtn
+                disabled={!(formObject.author && formObject.title)}
+                onClick={handleFormSubmit}
+              >
+                Submit Book
+              </FormBtn>
+            </form>
+          </Col>
+        </div>
+      </Row>
+    </Container>
+  );
+}
 
 
 export default Books;
