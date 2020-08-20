@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from 'axios';
+import BioPic from "../../pages/UserDashboard/BioPic";
 
 // function Avatar() {
   class Avatar extends Component {
@@ -93,6 +94,7 @@ import axios from 'axios';
             </div>
             <div className="card-body">
               <p className="card-text">Please upload an image for your profile</p>
+              {/* <BioPic></BioPic> */}
               <input type="file" onChange={this.singleFileChangedHandler}/>
               <div className="mt-5">
                 <button className="btn btn-info" onClick={this.singleFileUploadHandler}>Upload!</button>
