@@ -5,7 +5,7 @@ import Card from "../../components/Card"
 // import Portrait from "../../assets/portrait.jpg"
 import Lists from "../../components/Lists";
 import Avatar from "../../components/Avatar/Avatar"
-
+import Bio from "../../components/Bio"
 
 function Main() {
 
@@ -16,11 +16,7 @@ function Main() {
           <Card>
            <div className="image-text-container">
             <Avatar/>
-            <p className="about"> Hello! My name is Karleigh Ponnock I am a dedicated Junior Front-End Web Developer in Miami, Florida..............
-           </p>
-           <div className="list">
-           <Lists />
-           </div>
+            <Bio/>
            </div>
           </Card>
       </div>

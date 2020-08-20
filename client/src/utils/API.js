@@ -10,6 +10,9 @@ export default {
     },
     loadUser(headers) {
         return axios.get("/auth/user", headers)
+    },
+    createArtist(data){
+        return axios.post("/api/artist", data)
     }
 
 }
