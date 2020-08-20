@@ -92,7 +92,7 @@ function Books() {
         <div>
           <Col size="md-12" >
             <form className="form">
-              <h3>Update Profile</h3>
+              <h2>Update Profile</h2>
               <Input
                 onChange={handleInputChange}
                 name="title"
@@ -115,7 +115,7 @@ function Books() {
                 disabled={!(formObject.author && formObject.title)}
                 onClick={handleFormSubmit}
               >
-                Submit Book
+                Submit
               </FormBtn>
             </form>
           </Col>

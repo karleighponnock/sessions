@@ -3,7 +3,7 @@ import { Router, Route, Switch } from "react-router-dom";
 import history from "../history";
 import { useDispatch } from "react-redux";
 import { loadUser } from "../actions/authActions";
-import NavBar from "./NavBar";
+import NavBar from "././NavBar/NavBar";
 import Home from "../pages/Home";
 import UserDashboard from "../pages/UserDashboard";
 import NewSesh from "../pages/NewSesh";
