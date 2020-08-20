@@ -147,12 +147,12 @@ class NewSesh extends Component {
         return (
             <div className="container-all">
                 		<h1>New Sesh</h1>
-				<h5>Upload photos to client galleries</h5>
+				{/* <h5>Upload photos to client galleries</h5>
 
                 <div id="image-group" className="container mt-120">                    
                     {this.state.images.map((x, i) =>
                     <img style={imgstyle} src={x} key={i + '-img'} alt={x} />)}
-                </div>
+                </div> */}
 
                 {/* For Alert box*/}
                 <div id="oc-alert-container"></div>

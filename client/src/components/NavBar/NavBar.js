@@ -1,7 +1,8 @@
 import React from 'react';
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import Logout from "./Logout";
+import Logout from "../Logout";
+import "./style.css";
 
 export const NavBar = () => {
 
