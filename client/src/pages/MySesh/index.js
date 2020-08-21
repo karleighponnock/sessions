@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import "./style.css";
+import Card from "../../components/Card"
 
 class MySesh extends Component {
 	state = {
@@ -145,10 +146,11 @@ class MySesh extends Component {
 
 		console.log(this.state);
 		return (
+		
 			<div className="container-all">
 				 <p className="title title-new"> My Sessions</p>
-				<h5>View your gallery</h5>
-			
+				<h5 className="little-title">View your gallery</h5>
+
 				{
 					this.state.images.map((x, i) =>
 						<img style={imgstyle} src={x} key={i + '-img'} alt={x} />)
@@ -184,6 +186,7 @@ class MySesh extends Component {
 					</div>
 				</div> */}
 			</div>
+			
 		);
 	}
 }
