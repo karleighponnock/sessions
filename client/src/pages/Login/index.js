@@ -15,7 +15,7 @@ const Login = (props) => {
 // this page shows on each reload 
     useEffect(() => {
         if (isAuthenticated) {
-            props.history.push("/newsesh")
+            props.history.push("/dashboard")
         }
     })
 
