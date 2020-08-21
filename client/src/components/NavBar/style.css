@@ -1,0 +1,16 @@
+.link{
+    display: flex;
+    align-items: center;
+    position: relative;
+    vertical-align: middle;
+    line-height: 1;
+    padding: .92857143em 1.14285714em;
+    color: rgb(161, 101, 240);
+    font-family: 'Rubik Mono One', sans-serif;
+}
+
+.link:hover{
+    color: white;
+    text-shadow: 0 0 7px white;
+}
+
