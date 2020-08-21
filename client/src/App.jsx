@@ -1,72 +1,72 @@
-import React, { useState } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import MySesh from "./pages/MySesh/index";
-import axios from 'axios';
+// import React, { useState } from 'react';
+// import { BrowserRouter as Router, Route } from 'react-router-dom';
+// import MySesh from "./pages/MySesh/index";
+// import axios from 'axios';
 
 
-function App() {
-  /** start states */
-  const [formData, setFormData] = useState('');
-  const [info, setInfo] = useState({
-    image: '',
-    name: '',
-  });
-  const [progressPercent, setProgressPercent] = useState(0);
-  const [error, setError] = useState({
-    found: false,
-    message: '',
-  });
-  /** end states */
+// function App() {
+//   /** start states */
+//   const [formData, setFormData] = useState('');
+//   const [info, setInfo] = useState({
+//     image: '',
+//     name: '',
+//   });
+//   const [progressPercent, setProgressPercent] = useState(0);
+//   const [error, setError] = useState({
+//     found: false,
+//     message: '',
+//   });
+//   /** end states */
 
-  // Upload image
-  const upload = ({ target: { files } }) => {
-    let data = new FormData();
-    data.append('categoryImage', files[0]);
-    data.append('name', files[0].name);
-    setFormData(data);
-  };
+//   // Upload image
+//   const upload = ({ target: { files } }) => {
+//     let data = new FormData();
+//     data.append('categoryImage', files[0]);
+//     data.append('name', files[0].name);
+//     setFormData(data);
+//   };
 
-  // Submit Form
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setInfo({
-      image: '',
-      name: '',
-    });
-    setProgressPercent(0);
-    const options = {
-      onUploadProgress: (progressEvent) => {
-        const { loaded, total } = progressEvent;
-        let percent = Math.floor((loaded * 100) / total);
-        console.log(`${loaded}kb of ${total}kb | ${percent}%`);
-        setProgressPercent(percent);
-      },
-    };
-    axios
-      .post('/api/category', formData, options)
-      .then((res) => {
-        console.log(res.data);
-        setTimeout(() => {
-          setInfo(res.data.category);
-          setProgressPercent(0);
-        }, 1000);
-      })
-      .catch((err) => {
-        console.log(err.response);
-        setError({
-          found: true,
-          message: err.response.data.errors,
-        });
-        setTimeout(() => {
-          setError({
-            found: false,
-            message: '',
-          });
-          setProgressPercent(0);
-        }, 3000);
-      });
+//   // Submit Form
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
+//     setInfo({
+//       image: '',
+//       name: '',
+//     });
+//     setProgressPercent(0);
+//     const options = {
+//       onUploadProgress: (progressEvent) => {
+//         const { loaded, total } = progressEvent;
+//         let percent = Math.floor((loaded * 100) / total);
+//         console.log(`${loaded}kb of ${total}kb | ${percent}%`);
+//         setProgressPercent(percent);
+//       },
+//     };
+//     axios
+//       .post('/api/category', formData, options)
+//       .then((res) => {
+//         console.log(res.data);
+//         setTimeout(() => {
+//           setInfo(res.data.category);
+//           setProgressPercent(0);
+//         }, 1000);
+//       })
+//       .catch((err) => {
+//         console.log(err.response);
+//         setError({
+//           found: true,
+//           message: err.response.data.errors,
+//         });
+//         setTimeout(() => {
+//           setError({
+//             found: false,
+//             message: '',
+//           });
+//           setProgressPercent(0);
+//         }, 3000);
+//       });
     
-  };
+//   };
 
   // return (
   //   <div
@@ -131,6 +131,6 @@ function App() {
   //     </div>
   //   </div>
   // );
-}
 
-export default App;
+
+// export default App;

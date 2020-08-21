@@ -12,9 +12,10 @@ const Login = (props) => {
 
     const dispatch = useDispatch();
 
+// this page shows on each reload 
     useEffect(() => {
         if (isAuthenticated) {
-            props.history.push("/mysesh")
+            props.history.push("/newsesh")
         }
     })
 
