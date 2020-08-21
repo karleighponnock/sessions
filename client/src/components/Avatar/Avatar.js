@@ -6,18 +6,21 @@ import BioPic from "../../pages/UserDashboard/BioPic";
 class Avatar extends Component {
   render() {
     console.log(this.state);
+    
     return (
+      
       <div className="container">
+        <p className="title title-new"> Profile </p>
         {/* For Alert box*/}
-        <div id="oc-alert-container"></div>
+        <div id="oc-alert-container-bio-pic"></div>
         {/* Single File Upload*/}
         <div className="card border-light mb-3 mt-5" style={{ boxShadow: '0 5px 10px 2px rgba(195,192,192,.5)' }}>
-          <div className="card-header">
-            <h3 style={{ color: '#555', marginLeft: '12px' }}>Single Image Upload</h3>
-            <p className="text-muted" style={{ marginLeft: '12px' }}>Upload Size: 250px x 250px ( Max 2MB )</p>
-          </div>
+          {/* <div className="card-header"> */}
+          {/* <h3 style={{ color: '#555', marginLeft: '12px' }}>Single Image Upload</h3> */}
+          {/* <p className="text-muted" style={{ marginLeft: '12px' }}>Upload Size: 250px x 250px ( Max 2MB )</p> */}
+          {/* </div> */}
           <div className="card-body">
-            <p className="card-text">Please upload an image for your profile</p>
+            {/* <p className="card-text">Please upload an image for your profile</p> */}
 
             {/* Images uploading from BioPic page in User Dashboard */}
             <BioPic></BioPic>
