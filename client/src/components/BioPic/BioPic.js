@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import "./style.css";
 
 class BioPic extends Component {
 	state = {
@@ -100,7 +99,7 @@ class BioPic extends Component {
 				<div id="image-group" className="container">
 					{/* {this.state.images.map((x, i) => */}
 					
-						<img style={imgstyle} src={this.state.images[this.state.images.length -1]} /> 
+						<img style={imgstyle} src={this.state.images[this.state.images.length -1]} alt={this.state.images[this.state.images.length -1]}/> 
 						{/* ) */}
 				</div>
 				
