@@ -5,7 +5,8 @@ import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid/index";
 import { List, ListItem } from "../../components/List";
 import { Input, TextArea, FormBtn } from "../../components/Form";
-import Avatar from "../../components/Avatar/Avatar"
+// import Avatar from "../../components/Avatar/Avatar"
+import BioPic from "../../components/BioPic/BioPic";
 import "./style.css";
 
 function Books() {
@@ -56,9 +57,28 @@ function Books() {
   };
 
   return (
+    <div>
+      <p className="title title-new"> Profile </p>
+
     <Container fluid>
       <div className="pic">
-        <Avatar />
+        {/* <Avatar /> */}
+        <div className="container-all">
+     
+        {/* For Alert box*/}
+        <div id="oc-alert-container-bio-pic"></div>
+        {/* Single File Upload*/}
+        <div className="card border-light mb-3 mt-5" style={{ boxShadow: '0 5px 10px 2px rgba(195,192,192,.5)' }}>
+   
+          <div className="card-body">
+            
+            {/* Images uploading from BioPic page in User Dashboard */}
+            <BioPic></BioPic>
+
+            
+          </div>
+        </div>
+      </div>
       </div>
       <Row>
         <div className="info">
@@ -122,6 +142,7 @@ function Books() {
         </div>
       </Row>
     </Container>
+    </div>
   );
 }
 
