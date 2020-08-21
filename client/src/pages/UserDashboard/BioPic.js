@@ -152,8 +152,6 @@ class BioPic extends Component {
                 {/* <p className="title title-new"> New Sesh</p> */}
                 		
         {/* *********group of images on the New Sesh page but keep for now */}
-				<h5>Upload photos to client galleries</h5>
-
                 <div id="image-group" className="container mt-120">                    
                     {this.state.images.map((x, i) =>
                     <img style={imgstyle} src={x} key={i + '-img'} alt={x} />)}
@@ -167,7 +165,7 @@ class BioPic extends Component {
 	{/* uploads a single pic from AWS bucket to the BioPic page on for the dashboard Avatar */}
                 <div className="card mt-5">
                     <div className="card-header">
-                        <h3>Single Image Upload</h3>
+                        <h3 className="avatar-upload">Avatar Upload for your Profile</h3>
                         <p> * Upload Size: 250px x 250px ( Max 2MB ) * </p>
                     </div>
                     <div className="card-body">

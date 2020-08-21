@@ -141,9 +141,9 @@ class NewSesh extends Component {
     render() {
 
         // ************ might not need this on New Sesh page but keep for now
-        const imgstyle = {
-            maxHeight: '100px'
-        }
+        // const imgstyle = {
+        //     maxHeight: '100px'
+        // }
         // ************************************* //
         console.log(this.state);
 
