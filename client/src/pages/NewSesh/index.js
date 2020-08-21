@@ -150,7 +150,7 @@ class NewSesh extends Component {
         return (
             <div className="container-all">
                 <p className="title title-new"> New Sesh</p>
-                <h5>Upload photos to client galleries</h5>
+                <h5 className="little-title">Upload photos to client galleries</h5>
                 {/* For Alert box*/}
                 <div id="oc-alert-container"></div>
 
