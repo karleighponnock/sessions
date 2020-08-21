@@ -9,7 +9,7 @@ class Avatar extends Component {
     
     return (
       
-      <div className="container">
+      <div className="container-all">
         <p className="title title-new"> Profile </p>
         {/* For Alert box*/}
         <div id="oc-alert-container-bio-pic"></div>
