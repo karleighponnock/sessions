@@ -14,9 +14,15 @@ export function Avatar() {
       .then(res => {
         console.log(res.data.Contents)
         //get key from local storage
+        localStorage.getItem('file.name')
         //look over contents(iterate) check for each key
-        //if key matches
+        // for (var i = 0; i < res.data.Contents; i++) {
+          //if key matches
+          // if(file.name === key){
+            
+          // }
         //display
+        // }
           // .map(x => 'https://artangelssessions.s3.amazonaws.com/' + x.Key)
       }
       )
@@ -42,7 +48,7 @@ export function Avatar() {
     const data = new FormData();
     const [file] = event.target.files;
     /////file.name store it locally
-
+    localStorage.setItem('key', 'value')
     if (file) {
       const reader = new FileReader();
       const { current } = uploadedImage;
