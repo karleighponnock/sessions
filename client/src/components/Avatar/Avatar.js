@@ -14,15 +14,17 @@ export function Avatar() {
       .then(res => {
         console.log(res.data.Contents)
         const gallInfo = res.data.Contents
+       
         //get key from local storage
         const file = localStorage.getItem('image')
         console.log("localstorage", file);
         //look over contents(iterate) check for each key
         for (var i = 0; i < res.data.Contents; i++) {
           //if key matches
-          if(gallInfo === image){
-              
-          }
+          // src = document.getElementById("photodiv");
+          // if(gallInfo === image){
+          //   src.appendChild(this.img)
+          // }
         }
       }
       )
@@ -97,7 +99,7 @@ export function Avatar() {
 
 
   return (
-    <div className="bio-pic">
+    <div className="bio-pic" id="photodiv">
       <div
         style={{
           display: "flex",
