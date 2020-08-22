@@ -10,25 +10,30 @@ export function Avatar() {
   const imageUploader = React.useRef(null);
 
   useEffect(() => {
-    axios.get("/api/fileAWS")
-      .then(res => {
-        console.log(res.data.Contents)
-        const gallInfo = res.data.Contents
+  //   axios.get("/api/fileAWS")
+  //     .then(res => {
+  //       console.log(res.data.Contents)
+  //       const gallInfo = res.data.Contents
        
-        //get key from local storage
-        const file = localStorage.getItem('image')
-        console.log("localstorage", file);
-        //look over contents(iterate) check for each key
-        for (var i = 0; i < res.data.Contents; i++) {
-          //if key matches
-          // src = document.getElementById("photodiv");
-          // if(gallInfo === image){
-          //   src.appendChild(this.img)
-          // }
-        }
-      }
-      )
-      .catch(err => console.warn(err.message))
+  //       //get key from local storage
+  //       const file = localStorage.getItem('image')
+  //       console.log("localstorage", file);
+  //       //look over contents(iterate) check for each key
+  //       for (var i = 0; i < res.data.Contents.length; i++) {
+  //         console.log(res.data.Contents[i].Key);
+  //         //if key matches
+  //         if(res.data.Contents[i].Key === file){
+  //           console.log("found a match", res.data.Contents[i].Key, file) 
+  //           break
+  //           // src.appendChild(this.img)
+  //         }
+  //       }
+  //     }
+  //     )
+      
+  //     .catch(err => console.warn(err.message))
+      var lastSaved = JSON.parse(localStorage.getItem("image"))
+      console.log(lastSaved);
   },[])
 
   const handleImageUpload = e => {
@@ -50,8 +55,7 @@ export function Avatar() {
     const data = new FormData();
     const [file] = event.target.files;
     console.log("checkinggg", file)
-    /////file.name store it locally
-    localStorage.setItem('image',JSON.stringify(file.name))
+   
 
     if (file) {
       const reader = new FileReader();
@@ -85,6 +89,8 @@ export function Avatar() {
           } else {
             // Success
             let fileName = response.data;
+             /////file.name store it locally
+    localStorage.setItem('image',JSON.stringify(fileName))
             console.log('filedata', fileName);
           }
         }
