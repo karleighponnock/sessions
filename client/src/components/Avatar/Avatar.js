@@ -13,17 +13,17 @@ export function Avatar() {
     axios.get("/api/fileAWS")
       .then(res => {
         console.log(res.data.Contents)
+        const gallInfo = res.data.Contents
         //get key from local storage
-        localStorage.getItem('file.name')
+        const file = localStorage.getItem('image')
+        console.log("localstorage", file);
         //look over contents(iterate) check for each key
-        // for (var i = 0; i < res.data.Contents; i++) {
+        for (var i = 0; i < res.data.Contents; i++) {
           //if key matches
-          // if(file.name === key){
-            
-          // }
-        //display
-        // }
-          // .map(x => 'https://artangelssessions.s3.amazonaws.com/' + x.Key)
+          if(gallInfo === image){
+              
+          }
+        }
       }
       )
       .catch(err => console.warn(err.message))
@@ -47,8 +47,10 @@ export function Avatar() {
     event.preventDefault();
     const data = new FormData();
     const [file] = event.target.files;
+    console.log("checkinggg", file)
     /////file.name store it locally
-    localStorage.setItem('key', 'value')
+    localStorage.setItem('image',JSON.stringify(file.name))
+
     if (file) {
       const reader = new FileReader();
       const { current } = uploadedImage;
