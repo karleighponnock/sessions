@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid/index";
 import { List, ListItem } from "../../components/List";
 import { Input, TextArea, FormBtn } from "../../components/Form";
-// import Avatar from "../../components/Avatar/Avatar"
-import BioPic from "../../components/BioPic/BioPic";
+import Avatar from "../../components/Avatar/Avatar"
+// import BioPic from "../../components/BioPic/BioPic";
 import "./style.css";
 
 function Books() {
@@ -60,88 +60,74 @@ function Books() {
     <div>
       <p className="title title-new"> Profile </p>
 
-    <Container fluid>
-      <div className="pic">
-        {/* <Avatar /> */}
-        <div className="container-all">
-     
-        {/* For Alert box*/}
-        <div id="oc-alert-container-bio-pic"></div>
-        {/* Single File Upload*/}
-        <div className="card border-light mb-3 mt-5" style={{ boxShadow: '0 5px 10px 2px rgba(195,192,192,.5)' }}>
-   
-          <div className="card-body">
-            
-            {/* Images uploading from BioPic page in User Dashboard */}
-            <BioPic></BioPic>
-
-            
+      <Container fluid>
+        <div className="pic">
+          <Avatar />
+          <div className="container-all">
           </div>
         </div>
-      </div>
-      </div>
-      <Row>
-        <div className="info">
-          <Col size="md-12 sm-4 ">
-            {books.length ? (
-              <List>
-                {books.map(book => (
-                  <ListItem key={book._id}>
-                    <Link to={"/books/" + book._id}>
-                      <div className="info">
-                        <div className="name">
-                          {book.title}
-                        </div>
-                        <div className="location">
-                          <br />
+        <Row>
+          <div className="info">
+            <Col size="md-12 sm-4 ">
+              {books.length ? (
+                <List>
+                  {books.map(book => (
+                    <ListItem key={book._id}>
+                      <Link to={"/books/" + book._id}>
+                        <div className="info">
+                          <div className="name">
+                            {book.title}
+                          </div>
+                          <div className="location">
+                            <br />
                         from {book.author}
-                        </div> <br />
-                        {book.synopsis}
-                      </div>
-                    </Link>
-                    <DeleteBtn onClick={() => deleteBook(book._id)} />
-                  </ListItem>
+                          </div> <br />
+                          {book.synopsis}
+                        </div>
+                      </Link>
+                      <DeleteBtn onClick={() => deleteBook(book._id)} />
+                    </ListItem>
 
-                ))}
-              </List>
-            ) : (
-                <h3>No Results to Display</h3>
-              )}
-          </Col>
-        </div>
-        <div>
-          <Col size="md-12" >
-            <form className="form">
-              <h2>Update Profile</h2>
-              <Input
-                onChange={handleInputChange}
-                name="title"
-                placeholder="Name (required)"
-                className="fill-name"
-              />
-              <Input
-                onChange={handleInputChange}
-                name="author"
-                placeholder="Location (required)"
-                className="fill-loc"
-              />
-              <TextArea
-                onChange={handleInputChange}
-                name="synopsis"
-                placeholder="Bio (optional)"
-                className="fill-bio"
-              />
-              <FormBtn
-                disabled={!(formObject.author && formObject.title)}
-                onClick={handleFormSubmit}
-              >
-                Submit
+                  ))}
+                </List>
+              ) : (
+                  <h3>No Results to Display</h3>
+                )}
+            </Col>
+          </div>
+          <div>
+            <Col size="md-12" >
+              <form className="form">
+                <h2>Update Profile</h2>
+                <Input
+                  onChange={handleInputChange}
+                  name="title"
+                  placeholder="Name (required)"
+                  className="fill-name"
+                />
+                <Input
+                  onChange={handleInputChange}
+                  name="author"
+                  placeholder="Location (required)"
+                  className="fill-loc"
+                />
+                <TextArea
+                  onChange={handleInputChange}
+                  name="synopsis"
+                  placeholder="Bio (optional)"
+                  className="fill-bio"
+                />
+                <FormBtn
+                  disabled={!(formObject.author && formObject.title)}
+                  onClick={handleFormSubmit}
+                >
+                  Submit
               </FormBtn>
-            </form>
-          </Col>
-        </div>
-      </Row>
-    </Container>
+              </form>
+            </Col>
+          </div>
+        </Row>
+      </Container>
     </div>
   );
 }

@@ -34,10 +34,13 @@ class NewSesh extends Component {
 
     singleFileUploadHandler = (event) => {
         const data = new FormData();
+        console.log("this is the data", data)
         // If file selected
         if (this.state.selectedFile) {
 
             data.append('fileAWSImage', this.state.selectedFile, this.state.selectedFile.name);
+
+            console.log("Hello", this.state.selectedFile);
 
             axios.post('/api/fileAWS/fileAWS-upload', data, {
                 headers: {
