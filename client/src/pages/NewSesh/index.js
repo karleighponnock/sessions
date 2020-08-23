@@ -142,29 +142,14 @@ class NewSesh extends Component {
 
 
     render() {
-
-        // ************ might not need this on New Sesh page but keep for now
-        // const imgstyle = {
-        //     maxHeight: '100px'
-        // }
-        // ************************************* //
         console.log(this.state);
-
         return (
             <div className="container-all">
                 <p className="title title-new"> New Sesh</p>
                 <h5 className="little-title">Upload photos to client galleries</h5>
+
                 {/* For Alert box*/}
                 <div id="oc-alert-container"></div>
-
-                {/* *********group of images on the New Sesh page but keep code for now ***************** */}
-                {/* <div id="image-group" className="container mt-120">                    
-                    {this.state.images.map((x, i) =>
-                    <img style={imgstyle} src={x} key={i + '-img'} alt={x} />)}
-                </div> */}
-                {/* ************************************************** */}
-
-
 
                 {/* Single File Upload*/}
                 <div className="card mt-5">

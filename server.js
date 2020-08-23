@@ -12,15 +12,10 @@ const router = express.Router();
 const app = express();
 
 // middleware to parse data
-// app.use(express.urlencoded({ extended: true }))
-// app.use(express.json())
 app.use( bodyParser.urlencoded( { extended: false } ) );
 app.use( bodyParser.json() );
 
 module.exports = router;
-
-// const fileAWS = require( './routes/api/fileAWS' );
-// app.use( '/api/fileAWS', fileAWS );
 
 // serve up static assets
 if (process.env.NODE_ENV === "production") {

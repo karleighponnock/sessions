@@ -85,24 +85,19 @@ class BioPic extends Component {
 		}, 3000);
 	};
 
-
 	render() {
 		const imgstyle = {
 			maxHeight: '100px'
 		}
-
 		console.log("here is the state", this.state);
-
 		return (
 			<div className="container-all">
 				{console.log(this.state.images)}
 				<div id="image-group" className="container">
-					{/* {this.state.images.map((x, i) => */}
-					
-						<img style={imgstyle} src={this.state.images[this.state.images.length -1]} alt={this.state.images[this.state.images.length -1]}/> 
-						{/* ) */}
+					<img style={imgstyle} src={this.state.images[this.state.images.length - 1]} alt={this.state.images[this.state.images.length - 1]} />
+					{/* ) */}
 				</div>
-				
+
 				{/* For Alert box*/}
 				<div id="oc-alert-container-bio-pic"></div>
 
@@ -119,21 +114,6 @@ class BioPic extends Component {
 						</div>
 					</div>
 				</div>
-
-				{/* below code not needed since we are not uploading more than one pic for the avatar on dashboard page. */}
-				{/* Multiple File Upload
-                <div className="card">
-                    <div className="card-header">
-                        <h3>Multiple Images Upload ( Max 4 ) </h3>
-                        <p> * Upload Size: 400px x 400px ( Max 2MB ) * </p>
-                    </div>
-                    <div className="card-body">
-                        <input type="file" multiple onChange={this.multipleFileChangedHandler} />
-                        <div className="mt-5">
-                            <button className="btn btn-info" onClick={this.multipleFileUploadHandler}>Upload !</button>
-                        </div>
-                    </div>
-                </div> */}
 			</div>
 		);
 	}

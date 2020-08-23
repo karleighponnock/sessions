@@ -1,72 +1,56 @@
+# Sessions ![GitHub deployments](https://img.shields.io/github/deployments/badges/shields/shields-staging?color=green)
+  
 
-# Boiler Plate - MERN Application with Authentication using JSON Web Tokens (JWT)  
+  ## Overview 
+  A place for artists to share and store sessions  
 
-## Online Example & Deployment:
+  ## Table of Contents:
+  - [Links to Deployed app](#Links (*deployed app and repo*))
+  - [Screenshots and Vids](#Screenshots_and_Vids)
+  - [Motivation](#Motivation)
+  - [Installation](#Installation)
+  - [How to use](#How_to_use)
+  - [Benefit](#Benefit)
+  - [License](#License)
+  - [Tests](#Tests)
+  - [Contribute](#Contribute)
 
-This application was deployed to Heroku services.
--  Link: https://project3-plate.herokuapp.com/
+ ## Links (*deployed app and repo*)
+  - [Heroku](https://)
+  - [GitHub Pages](https://)
+  - [GitHub Repo](https://github.com/karleighponnock/sessions)
 
-## Description
+ ## Screenshots_and_Vids 
+  - ![Short vid of deployed project](giphy)
+  - ![Screenshot of deployed project](./assets/images/screenshot1.png)  
+  - ![Screenshot of deployed project](./assets/images/screenshot2.png)
+  - ![Screenshot of deployed project](./assets/images/screenshot3.png)  
+  - ![Screenshot of deployed project](./assets/images/screenshot4.png)
+  
+  ## Motivation
+  Why was this project started.
 
-This is a Boiler Plate MERN application with authentication using JSON Web Tokens. This APP was design to be used as a starting point for any developer looking to integrate authentication with a MERN application.
+  ## Installation ![npm](https://img.shields.io/npm/v/npm?color=pink&style=plastic) 
+  No installation needed.  Just [click here](http://) to view the deployed application!
 
-This application uses JWT to handle Authentication and Redux to handle React state.
-
-## Web Tools:
-
-Full MERN stack: React, Node.js, Express, MongoDB, Javascript (ES6), Redux, JSON Web Tokens, Rest API, Semantic UI.
-
-## Table of Contents 
-
-* [Installation](#installation)
-
-* [Usage](#usage)
-
-
-
-## Installation
-
-To install necessary dependencies, run the following command:
-
-```
-npm install
-```
-
-## Usage
-``` 
-    To start using this project: 
-
-    1.  Install node modules for Fron-End and Back-End with: npm install
-    2.  Create a .env file at the root location of the project to handle the database credentials and JWT secret:
-    
-        # Database Info
-        DATABASE_INFO = "Your Mongo Credentials"
-
-        #JWT Secret
-        JWT_SECRET = "Your JWT Secret"
-
-    3.  Run the following command to start the application: npm run dev
-    4.  Enjoy..!
-``` 
-
-## Questions
-
-<img src="https://avatars0.githubusercontent.com/u/40499942?v=4" alt="avatar" style="border-radius: 16px" width="30" />
-
-If you have any questions about the repo, open an issue or contact [jaab30](https://github.com/jaab30) directly at jaab30@yahoo.com.
-
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/jaab30/ticketGen)
-
-<!-- ## Video Preview -->
-
-<!-- [<img src="https://user-images.githubusercontent.com/40499942/83711110-511fe400-a5f0-11ea-9fc9-e3397e3b0cb9.jpg" alt="app video" width="600px"/>](https://www.youtube.com/watch?v=6_Ur7afd5zE&feature=youtu.be) -->
-
-## images
-
-<img src="https://user-images.githubusercontent.com/40499942/86778760-bcfacf80-c028-11ea-9c8c-56fa2f0b5cd7.png" alt="app example" width="600px"/>
-<img src="https://user-images.githubusercontent.com/40499942/86778798-c84dfb00-c028-11ea-914b-70ea02530111.png" alt="app example" width="600px"/>
-<img src="https://user-images.githubusercontent.com/40499942/86778829-d4d25380-c028-11ea-90a0-8e1f75e5f3a4.png" alt="app example" width="600px"/>
-<img src="https://user-images.githubusercontent.com/40499942/86778867-df8ce880-c028-11ea-9778-b583e8b9b6bf.png" alt="app example" width="600px"/>
-<img src="https://user-images.githubusercontent.com/40499942/86778904-eb78aa80-c028-11ea-9e92-fed6e7c6af3f.png" alt="app example" width="600px"/>
+  ## How_to_use
 
 
+  ## Benefit
+  
+
+  ## Credits
+  John Dinsmore, Jorge Alvarez, & Ben Benson with *WebDev Tutoring*
+
+  ## Tests
+
+ 
+  ## License ![APM](https://img.shields.io/apm/l/npm?color=pink&style=plastic)
+  [MIT License](https://opensource.org/licenses/MIT)
+  
+  Copyright © 2020 Jody Eggleston 
+
+  ## Contribute
+  For comments and/or questions, contact Karleigh Ponnock or Jody Eggleston via 
+  [Karleigh's]()
+  [Jody's Linkedin](https://www.linkedin.com/in/jody-eggleston/)
