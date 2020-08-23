@@ -138,6 +138,10 @@ class MySesh extends Component {
 		}, 3000);
 	};
 
+	deleteButton = () => {
+		console.log("not empty");
+		const tempArray = this.state.images;
+	}
 
 	render() {
 		const imgstyle = {
@@ -146,17 +150,22 @@ class MySesh extends Component {
 
 		console.log(this.state);
 		return (
-		
+
 			<div className="container-all">
-				 <p className="title title-new"> My Sessions</p>
+				<p className="title title-new"> My Sessions</p>
 				<h5 className="little-title">View your gallery</h5>
 
 				{
 					this.state.images.map((x, i) =>
-						<img style={imgstyle} src={x} key={i + '-img'} alt={x} />)
-				}
-		
-			
+						<div>
+							<img style={imgstyle} src={x} key={i + '-img'} alt={x} />
+							<button onClick={()=>this.deleteButton(i)}>
+								x
+						</button>
+						</div>
+					)}
+
+
 				{/* For Alert box*/}
 				{/* <div id="oc-alert-container"></div> */}
 				{/* Single File Upload*/}
@@ -186,7 +195,7 @@ class MySesh extends Component {
 					</div>
 				</div> */}
 			</div>
-			
+
 		);
 	}
 }
