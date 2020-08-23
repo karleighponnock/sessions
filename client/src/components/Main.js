@@ -11,12 +11,7 @@ import MySesh from "../pages/MySesh";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import PrivateRoute from "./PrivateRoute";
-import NoMatch from "../pages/NoMatch";
-
-
-// booksimport Books from "./pages/Books";
-// import Detail from "../pages/Detail";
-// import NoMatch from "./pages/NoMatch";
+import NoMatch from "../pages/NoMatch/index";
 
 export const Main = () => {
 

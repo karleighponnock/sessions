@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import "./style.css";
-import Card from "../../components/Card"
 
 class MySesh extends Component {
 	state = {
