@@ -1,63 +1,36 @@
-import React, { useEffect } from "react";
-import Dropzone from 'react-dropzone';
-import request from 'superagent';
+import React from "react";
+// import Dropzone from 'react-dropzone';
+// import request from 'superagent';
 import "./style.css"
 import axios from 'axios';
-
 
 export function Avatar() {
   const uploadedImage = React.useRef(null);
   const imageUploader = React.useRef(null);
   var lastSaved = JSON.parse(localStorage.getItem("image"))
 
-  useEffect(() => {
-  //   axios.get("/api/fileAWS")
-  //     .then(res => {
-  //       console.log(res.data.Contents)
-  //       const gallInfo = res.data.Contents
-       
-  //       //get key from local storage
-  //       const file = localStorage.getItem('image')
-  //       console.log("localstorage", file);
-  //       //look over contents(iterate) check for each key
-  //       for (var i = 0; i < res.data.Contents.length; i++) {
-  //         console.log(res.data.Contents[i].Key);
-  //         //if key matches
-  //         if(res.data.Contents[i].Key === file){
-  //           console.log("found a match", res.data.Contents[i].Key, file) 
-  //           break
-  //           // src.appendChild(this.img)
-  //         }
-  //       }
-  //     }
-  //     )
-      
-  //     .catch(err => console.warn(err.message))
-     
-      console.log(lastSaved);
+  console.log(lastSaved);
 
-  },[])
-
-  const handleImageUpload = e => {
-    const [file] = e.target.files;
-    if (file) {
-      const reader = new FileReader();
-      const { current } = uploadedImage;
-      current.file = file;
-      reader.onload = e => {
-        current.src = e.target.result;
-      };
-      reader.readAsDataURL(file);
-      console.log("file", file)
-    }
-  };
+  // const handleImageUpload = e => {
+  //   const [file] = e.target.files;
+  //   if (file) {
+  //     const reader = new FileReader();
+  //     const { current } = uploadedImage;
+  //     current.file = file;
+  //     reader.onload = e => {
+  //       current.src = e.target.result;
+  //     };
+  //     reader.readAsDataURL(file);
+  //     console.log("file", file)
+  //   }
+  // };
 
   function handleAvatarUpload(event) {
     event.preventDefault();
     const data = new FormData();
     const [file] = event.target.files;
     console.log("checkinggg", file)
-   
+
 
     if (file) {
       const reader = new FileReader();
@@ -91,8 +64,8 @@ export function Avatar() {
           } else {
             // Success
             let fileName = response.data;
-             /////file.name store it locally
-    localStorage.setItem('image',JSON.stringify(fileName))
+            /////file.name store it locally
+            localStorage.setItem('image', JSON.stringify(fileName))
             console.log('filedata', fileName);
           }
         }
@@ -101,10 +74,6 @@ export function Avatar() {
         this.ocShowAlert(error, 'red');
       });
   }
-
-
-
-
 
   return (
     <div className="bio-pic">
@@ -125,7 +94,7 @@ export function Avatar() {
             display: "none"
           }}
         />
-       
+
         <div
           style={{
             height: "360px",
@@ -138,6 +107,7 @@ export function Avatar() {
           <img
             ref={uploadedImage}
             src={lastSaved.location}
+            alt={uploadedImage}
             style={{
               width: "100%",
               height: "100%",
@@ -145,11 +115,8 @@ export function Avatar() {
             }}
           />
         </div>
-      Click to upload Image
-    </div>
-
-
-
+        Click to upload Image
+      </div>
     </div>
   );
 }
