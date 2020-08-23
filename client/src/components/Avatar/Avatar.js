@@ -107,6 +107,7 @@ export function Avatar() {
           <img
             ref={uploadedImage}
             src={lastSaved.location}
+            alt={uploadedImage}
             style={{
               width: "100%",
               height: "100%",
