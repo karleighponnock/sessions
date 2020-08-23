@@ -138,9 +138,13 @@ class MySesh extends Component {
 		}, 3000);
 	};
 
-	deleteButton = () => {
+	deleteButton = (i) => {
 		console.log("not empty");
 		const tempArray = this.state.images;
+		tempArray.splice(i, 1)
+		this.setState({
+			images: tempArray
+		})
 	}
 
 	render() {
@@ -159,7 +163,7 @@ class MySesh extends Component {
 					this.state.images.map((x, i) =>
 						<div>
 							<img style={imgstyle} src={x} key={i + '-img'} alt={x} />
-							<button onClick={()=>this.deleteButton(i)}>
+							<button onClick={() => this.deleteButton(i)}>
 								x
 						</button>
 						</div>
