@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/jaab30/react-jwt-boiler-plate#readme",
   "dependencies": {
-    "aws-sdk": "^2.736.0",
+    "aws-sdk": "^2.738.0",
     "bcrypt": "^5.0.0",
     "body-parser": "^1.19.0",
     "concurrently": "^5.3.0",

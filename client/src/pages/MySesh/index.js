@@ -15,7 +15,7 @@ class MySesh extends Component {
 			.then(res => this.setState({
 				images: res.data.Contents
 					.map(x => 'https://artangelssessions.s3.amazonaws.com/' + x.Key)
-			})
+			}, ()=> console.log(this.state.images))
 			)
 			.catch(err => console.warn(err.message))
 	}
@@ -142,6 +142,11 @@ class MySesh extends Component {
 		console.log("not empty");
 		const tempArray = this.state.images;
 		tempArray.splice(i, 1)
+		axios.post('/api/fileAWS/fileAWS-delete').then(
+			(data) => {
+				console.log(data)
+			}
+		).catch((err) => console.log(err))
 		this.setState({
 			images: tempArray
 		})

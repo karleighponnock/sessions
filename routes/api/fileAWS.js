@@ -5,6 +5,7 @@ const multerS3 = require('multer-s3');
 const multer = require('multer');
 const path = require('path');
 
+
 const router = express.Router();
 
 /**
@@ -98,6 +99,23 @@ router.post('/fileAWS-upload', (req, res) => {
 		}
 	});
 });
+
+router.post('/fileAWS-delete', (req, res) => {
+	const awsCredentials = {
+		AWS_BUCKET_NAME: process.env.AWS_BUCKET_NAME,
+		AWS_ACCESS_KEY_ID: process.env.AWS_SECRET_ACCESS_KEY,
+		AWS_SECRET_ACCESS_KEY: process.env.AWS_SECRET_ACCESS_KEY,
+		AWS_REGION: process.env.AWS_REGION
+	}
+	var s3 = new aws.S3(awsCredentials);
+	s3.deleteObject({
+		Bucket: artangelssessions,
+		Key: `i + '-img'`
+	}, function (err, data) {
+		if (error) console.log("Error", err);
+		else console.log(data);
+	})
+})
 
 /**
  * BUSINESS GALLERY IMAGES

@@ -8,6 +8,7 @@ import axios from 'axios';
 export function Avatar() {
   const uploadedImage = React.useRef(null);
   const imageUploader = React.useRef(null);
+  var lastSaved = JSON.parse(localStorage.getItem("image"))
 
   useEffect(() => {
   //   axios.get("/api/fileAWS")
@@ -32,8 +33,9 @@ export function Avatar() {
   //     )
       
   //     .catch(err => console.warn(err.message))
-      var lastSaved = JSON.parse(localStorage.getItem("image"))
+     
       console.log(lastSaved);
+
   },[])
 
   const handleImageUpload = e => {
@@ -105,7 +107,7 @@ export function Avatar() {
 
 
   return (
-    <div className="bio-pic" id="photodiv">
+    <div className="bio-pic">
       <div
         style={{
           display: "flex",
@@ -123,6 +125,7 @@ export function Avatar() {
             display: "none"
           }}
         />
+       
         <div
           style={{
             height: "360px",
@@ -130,11 +133,11 @@ export function Avatar() {
             padding: "10px"
           }}
           onClick={() => imageUploader.current.click()
-
           }
         >
           <img
             ref={uploadedImage}
+            src={lastSaved.location}
             style={{
               width: "100%",
               height: "100%",
