@@ -34,7 +34,6 @@ export const NavBar = () => {
             <Link to="/" className="link">Home</Link>
             {isAuthenticated ? <Link to="/newsesh" className="link">New Session</Link> : ""}
             {isAuthenticated ? <Link to="/mysesh" className="link">My Sessions</Link> : ""}
-        
 
             <div className="right menu">
                 {showLinks()}

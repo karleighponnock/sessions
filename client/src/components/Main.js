@@ -29,9 +29,7 @@ export const Main = () => {
                     <Route path="/" exact component={Home} />
                     <Route path="/login" component={Login} />
                     <Route path="/register" component={Register} />     
-        {/* change back to private route before presenting */}
-                    <Route path="/dashboard" component={UserDashboard} />
-
+                    <PrivateRoute path="/dashboard" component={UserDashboard} />
                     <PrivateRoute path="/mysesh" component={MySesh} />
                     <PrivateRoute path="/newsesh" component={NewSesh} />
                    
