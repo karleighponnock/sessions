@@ -48,7 +48,7 @@
   ## License ![APM](https://img.shields.io/apm/l/npm?color=pink&style=plastic)
   [MIT License](https://opensource.org/licenses/MIT)
   
-  Copyright © 2020 Karleight Ponnock & Jody Eggleston 
+  Copyright © 2020 Karleigh Ponnock & Jody Eggleston 
 
   ## Contribute
   For comments and/or questions, contact Karleigh Ponnock or Jody Eggleston via 
