@@ -8,6 +8,10 @@ body{
     color: white;
 }
 
+.submit:hover{
+    box-shadow: 0 0 10px white;
+}
+
 
 /* NavBar Styling */
 .ui.menu:first-child {
