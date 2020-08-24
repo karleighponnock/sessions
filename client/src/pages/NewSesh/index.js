@@ -13,7 +13,7 @@ class NewSesh extends Component {
         axios.get("/api/fileAWS")
             .then(res => this.setState({
                 images: res.data.Contents
-                    .map(x => 'https://artangelssessions.s3.amazonaws.com/' + x.Key)
+                    .map(x => 'https://art-angels-sessions.s3.amazonaws.com/' + x.Key)
             })
             )
             .catch(err => console.warn(err.message))
@@ -152,7 +152,7 @@ class NewSesh extends Component {
                 <div id="oc-alert-container"></div>
 
                 {/* Single File Upload*/}
-                <div id="newsesh-card-1" className="card mt-5">
+                <div className="card mt-5" id="newsesh-card-1" >
                     <div className="card-header">
                         <h3>Single Image Upload</h3>
                         <p> * Upload Size: 250px x 250px ( Max 2MB ) * </p>
@@ -165,7 +165,7 @@ class NewSesh extends Component {
                     </div>
                 </div>
                 {/* Multiple File Upload */}
-                <div id="newsesh-card-2" className="card">
+                <div className="card" id="newsesh-card-2" >
                     <div className="card-header">
                         <h3>Multiple Images Upload ( Max 4 ) </h3>
                         <p> * Upload Size: 400px x 400px ( Max 2MB ) * </p>

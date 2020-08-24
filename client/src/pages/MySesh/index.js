@@ -14,7 +14,7 @@ class MySesh extends Component {
 		axios.get("/api/fileAWS")
 			.then(res => this.setState({
 				images: res.data.Contents
-					.map(x => 'https://artangelssessions.s3.amazonaws.com/' + x.Key)
+					.map(x => 'https://art-angels-sessions.s3.amazonaws.com/' + x.Key)
 			}, () => console.log(this.state.images))
 			)
 			.catch(err => console.warn(err.message))
@@ -155,9 +155,6 @@ class MySesh extends Component {
 								x
 						</button></span>
 							<img style={imgstyle} src={x} key={i + '-img'} alt={x} />
-							{/* <button onClick={() => this.deleteButton(i)}>
-								x
-						</button> */}
 						</div>
 					)}
 				</div>

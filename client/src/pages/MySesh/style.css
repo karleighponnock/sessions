@@ -34,7 +34,6 @@ h3 {
 .img-wrap {
     position: relative;
     display: inline-block;
-    /* border: 1px red solid; */
     font-size: 0;
 }
 .img-wrap .close {
