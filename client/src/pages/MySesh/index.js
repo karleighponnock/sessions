@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import App from "./App"
 import "./style.css";
 
 class MySesh extends Component {
@@ -14,7 +15,7 @@ class MySesh extends Component {
 			.then(res => this.setState({
 				images: res.data.Contents
 					.map(x => 'https://artangelssessions.s3.amazonaws.com/' + x.Key)
-			}, ()=> console.log(this.state.images))
+			}, () => console.log(this.state.images))
 			)
 			.catch(err => console.warn(err.message))
 	}
@@ -52,7 +53,7 @@ class MySesh extends Component {
 					this.setState({
 						images: [...this.state.images, response.data.location]
 					})
-					
+
 				}).catch((error) => {
 					// If another error
 					this.ocShowAlert(error, 'red');
@@ -137,16 +138,17 @@ class MySesh extends Component {
 
 	render() {
 		const imgstyle = {
-			maxHeight: '100px'
+			maxHeight: '150px'
 		}
 		console.log(this.state);
 		return (
 			<div className="container-all">
+
 				<p className="title title-new"> My Sessions</p>
 				<h5 className="little-title">View your gallery</h5>
-
-				{
-					this.state.images.map((x, i) =>
+				<App></App>
+				<div id="image-grid">
+					{this.state.images.map((x, i) =>
 						<div>
 							<img style={imgstyle} src={x} key={i + '-img'} alt={x} />
 							<button onClick={() => this.deleteButton(i)}>
@@ -154,6 +156,7 @@ class MySesh extends Component {
 						</button>
 						</div>
 					)}
+				</div>
 			</div>
 
 		);
