@@ -152,7 +152,7 @@ class NewSesh extends Component {
                 <div id="oc-alert-container"></div>
 
                 {/* Single File Upload*/}
-                <div className="card mt-5" id="newsesh-card-1" >
+                <div id="newsesh-card-1" className="card-container">
                     <div className="card-header">
                         <h3>Single Image Upload</h3>
                         <p> * Upload Size: 250px x 250px ( Max 2MB ) * </p>
@@ -165,7 +165,7 @@ class NewSesh extends Component {
                     </div>
                 </div>
                 {/* Multiple File Upload */}
-                <div className="card" id="newsesh-card-2" >
+                <div id="newsesh-card-2" className="card-container">
                     <div className="card-header">
                         <h3>Multiple Images Upload ( Max 4 ) </h3>
                         <p> * Upload Size: 400px x 400px ( Max 2MB ) * </p>
