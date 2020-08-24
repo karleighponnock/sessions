@@ -7,24 +7,26 @@ class MySesh extends Component {
 	state = {
 		selectedFile: null,
 		selectedFiles: null,
-		images: []
+		images: [],
+		imageNames: []
 	}
 
 	componentDidMount() {
 		axios.get("/api/fileAWS")
 			.then(res => this.setState({
 				images: res.data.Contents
-					.map(x => 'https://art-angels-sessions.s3.amazonaws.com/' + x.Key)
+					.map(x => 'https://art-angels-sessions.s3.amazonaws.com/' + x.Key),
+					imageNames: res.data.Contents.map(x => x.Key)
 			}, () => console.log(this.state.images))
 			)
 			.catch(err => console.warn(err.message))
 	}
 
-	deleteButton = (i) => {
+	deleteButton = (image, i) => {
 		console.log("not empty");
 		const tempArray = this.state.images;
 		tempArray.splice(i, 1)
-		axios.post('/api/fileAWS/fileAWS-delete').then(
+		axios.post('/api/fileAWS/fileAWS-delete', {image}).then(
 			(data) => {
 				console.log(data)
 			}
@@ -49,7 +51,7 @@ class MySesh extends Component {
 					{this.state.images.map((x, i) =>
 						<div class="img-wrap">
 							<span class="close">
-							<button onClick={() => this.deleteButton(i)}>
+							<button onClick={() => this.deleteButton(this.state.imageNames[i], i)}>
 								x
 						</button></span>
 							<img style={imgstyle} src={x} key={i + '-img'} alt={x} />
