@@ -109,7 +109,7 @@ router.post('/fileAWS-delete', (req, res) => {
 	}
 	var s3 = new aws.S3(awsCredentials);
 	s3.deleteObject({
-		Bucket: artangelssessions,
+		Bucket: process.env.AWS_BUCKET_NAME,
 		Key: `i + '-img'`
 	}, function (err, data) {
 		if (error) console.log("Error", err);

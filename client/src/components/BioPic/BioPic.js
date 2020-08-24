@@ -12,7 +12,7 @@ class BioPic extends Component {
 		axios.get("/api/fileAWS")
 			.then(res => this.setState({
 				images: res.data.Contents
-					.map(x => 'https://artangelssessions.s3.amazonaws.com/' + x.Key)
+					.map(x => 'https://art-angels-sessions.s3.amazonaws.com/' + x.Key)
 			})
 			)
 			.catch(err => console.warn(err.message))
