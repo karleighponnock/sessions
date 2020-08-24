@@ -160,7 +160,7 @@ class NewSesh extends Component {
                     <div className="card-body">
                         <input type="file" onChange={this.singleFileChangedHandler} />
                         <div className="mt-5">
-                            <button className="btn btn-info" onClick={this.singleFileUploadHandler}>Upload!</button>
+                            <button className="btn submit" onClick={this.singleFileUploadHandler}>Upload!</button>
                         </div>
                     </div>
                 </div>
@@ -173,7 +173,7 @@ class NewSesh extends Component {
                     <div className="card-body">
                         <input type="file" multiple onChange={this.multipleFileChangedHandler} />
                         <div className="mt-5">
-                            <button className="btn btn-info" onClick={this.multipleFileUploadHandler}>Upload !</button>
+                            <button className="btn submit" onClick={this.multipleFileUploadHandler}>Upload !</button>
                         </div>
                     </div>
                 </div>
