@@ -1,29 +1,13 @@
 import React from "react";
-// import Dropzone from 'react-dropzone';
-// import request from 'superagent';
 import "./style.css"
 import axios from 'axios';
 
 export function Avatar() {
   const uploadedImage = React.useRef(null);
   const imageUploader = React.useRef(null);
-  var lastSaved = JSON.parse(localStorage.getItem("image"))
+  var lastSaved = JSON.parse(localStorage.getItem("image")) || " "
 
   console.log(lastSaved);
-
-  // const handleImageUpload = e => {
-  //   const [file] = e.target.files;
-  //   if (file) {
-  //     const reader = new FileReader();
-  //     const { current } = uploadedImage;
-  //     current.file = file;
-  //     reader.onload = e => {
-  //       current.src = e.target.result;
-  //     };
-  //     reader.readAsDataURL(file);
-  //     console.log("file", file)
-  //   }
-  // };
 
   function handleAvatarUpload(event) {
     event.preventDefault();
