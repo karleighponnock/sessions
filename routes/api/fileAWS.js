@@ -101,6 +101,7 @@ router.post('/fileAWS-upload', (req, res) => {
 });
 
 router.post('/fileAWS-delete', (req, res) => {
+	console.log("delete button");
 	const awsCredentials = {
 		AWS_BUCKET_NAME: process.env.AWS_BUCKET_NAME,
 		AWS_ACCESS_KEY_ID: process.env.AWS_SECRET_ACCESS_KEY,
@@ -111,8 +112,8 @@ router.post('/fileAWS-delete', (req, res) => {
 	s3.deleteObject({
 		Bucket: process.env.AWS_BUCKET_NAME,
 		Key: `i + '-img'`
-	}, function (err, data) {
-		if (error) console.log("Error", err);
+	}, function (error, data) {
+		if (error) console.log("Error", error);
 		else console.log(data);
 	})
 })

@@ -95,10 +95,11 @@ function Books() {
                 )}
             </Col>
           </div>
-          <div>
+          <div className="update">
             <Col size="md-12" >
               <form className="form">
-                <h2>Update Profile</h2>
+                <p className="update-title">Update Profile</p>
+                <div>
                 <Input
                   onChange={handleInputChange}
                   name="title"
@@ -123,6 +124,7 @@ function Books() {
                 >
                   Submit
               </FormBtn>
+              </div>
               </form>
             </Col>
           </div>

@@ -5,10 +5,12 @@
 
 .name{
    font-size: 40px;
+  color:  #b696e0;
 }
 
 .location{
    font-size: 25px;
+   color: black;
 }
 
 .info{
@@ -16,6 +18,7 @@
    float: left;
    width: 100%;
    height: 80%;
+   color: black;
 }
 
 .form{
@@ -23,28 +26,6 @@
   width: 500px;
 }
 
-.fill-name{
-   float: left;
-   border-radius: 5px;
-  font-size: 20px;
-  margin-bottom: 20px;
-}
-.fill-loc{
-   float: right;
-   border-radius: 5px;
-  font-size: 20px;
-  margin-bottom: 20px;
- 
-}
-.fill-bio{
-   border-radius: 5px;
-  font-size: 15px;
-  width: 100%;
-  
-}
-
-
- 
  .image-text-container{
      display: flex;
  }
@@ -65,3 +46,43 @@
  .avatar-upload {
     color: grey;
  }
+
+
+ p.update-title{
+margin-bottom: 30px;
+ }
+
+
+ .update{
+border: black;
+border-style: solid;
+height: 20%;
+width: 55%;
+margin: 75px;
+margin-left: 20%;
+ }
+
+ .fill-name{
+   float: left;
+   border-radius: 5px;
+  font-size: 20px;
+  margin-bottom: 20px;
+  background-color:  #b696e0;
+
+}
+.fill-loc{
+   float: right;
+   border-radius: 5px;
+  font-size: 20px;
+  margin-bottom: 20px;
+  background-color:  #b696e0;
+ 
+}
+.fill-bio{
+   border-radius: 5px;
+  font-size: 15px;
+  width: 100%;
+  background-color:  #b696e0;
+  height: 300px;
+  
+}
