@@ -149,11 +149,15 @@ class MySesh extends Component {
 				<App></App>
 				<div id="image-grid">
 					{this.state.images.map((x, i) =>
-						<div>
-							<img style={imgstyle} src={x} key={i + '-img'} alt={x} />
+						<div class="img-wrap">
+							<span class="close">
 							<button onClick={() => this.deleteButton(i)}>
 								x
-						</button>
+						</button></span>
+							<img style={imgstyle} src={x} key={i + '-img'} alt={x} />
+							{/* <button onClick={() => this.deleteButton(i)}>
+								x
+						</button> */}
 						</div>
 					)}
 				</div>
