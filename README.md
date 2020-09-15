@@ -20,23 +20,14 @@
   - [GitHub Pages](https://)
   - [GitHub Repo](https://github.com/karleighponnock/sessions)
 
- ## Screenshots_and_Vids 
-  - ![Short vid of deployed project](giphy)
-  - ![Screenshot of deployed project](./assets/images/screenshot1.png)  
-  - ![Screenshot of deployed project](./assets/images/screenshot2.png)
-  - ![Screenshot of deployed project](./assets/images/screenshot3.png)  
-  - ![Screenshot of deployed project](./assets/images/screenshot4.png)
-  
-  ## Motivation
-  Why was this project started.
-
-  ## Installation ![npm](https://img.shields.io/npm/v/npm?color=pink&style=plastic) 
-  No installation needed.  Just [click here](http://) to view the deployed application!
-
-  ## How_to_use
-
-
-  ## Benefit
+ ## Screenshots and Vids
+  - ![Screenshot of deployed project](./assets/screenshot1.png)  
+  - ![Screenshot of deployed project](./assets/upload.png)  
+  - ![Screenshot of deployed project](./assets/upload2.png)  
+  - ![Screenshot of deployed project](./assets/success.png)  
+  - ![Screenshot of deployed project](./assets/mysessions.png)  
+  - ![Screenshot of deployed project](./assets/profile.png)
+  - ![Screenshot of deployed project](./assets/update.png)
   
 
   ## Credits
