@@ -35,15 +35,15 @@ class App extends Component {
 
         <div className="page">
 
-          <button
+          {/* <button
             onClick={() => this.prevImageSlide()}
             disabled={imageSlide.index === 0}
           >Prev</button>
           <button
             onClick={() => this.nextImageSlide()}
             disabled={imageSlide.index === data.imageSlideshow.length - 1}
-          >Next</button>
-
+          >Next</button> */}
+{/* 
           <div className="col">
             <div className={`cards-slider active-slide-${imageSlide.index}`}>
               <div className="cards-slider-wrapper" style={{
@@ -54,7 +54,7 @@ class App extends Component {
                 }
               </div>
             </div>
-          </div>
+          </div> */}
 
         </div>
       </div>
